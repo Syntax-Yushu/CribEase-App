@@ -7,7 +7,7 @@ import Login from "./login";
 import Signup from "./signup";
 import MainTabs from "./mainTabs"; 
 import BabyTemp from "./babyTemp";
-import Logout from "./logout";
+
 
 const Stack = createStackNavigator();
 
@@ -23,7 +23,7 @@ export default function App() {
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Dashboard" component={MainTabs} />
         <Stack.Screen name="BabyTemp" component={BabyTemp}/>
-        <Stack.Screen name="Logout" component={Logout} />
+        
 
       </Stack.Navigator>
     </NavigationContainer>
