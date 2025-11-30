@@ -18,7 +18,7 @@ Mao ni ang toggle mode sa firebase
 true  = para emulator (offline)
 false = pang live Firebase (online)
 */                      
-const USE_EMULATOR = true; 
+const USE_EMULATOR = false; 
 
 const app = initializeApp(firebaseConfig);
 

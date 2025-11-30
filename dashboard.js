@@ -66,7 +66,7 @@ export default function Dashboard({ navigation }) {
           },
           {
             id: "5",
-            icon: "📉",
+            icon: "📉", 
             title: "Sleeping Patterns",
             status: "Status:",
             value: data.fallCount || 0,
@@ -99,6 +99,7 @@ export default function Dashboard({ navigation }) {
         </Text>
       </View>
     </TouchableOpacity>
+    
   );
 
   return (
