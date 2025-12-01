@@ -1,10 +1,12 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Alert } from "react-native";
 import { auth } from "./firebase";
+
 export default function More({ navigation }) {
 
-const userEmail = auth.currentUser?.email || "User";
-const initial = userEmail.charAt(0).toUpperCase();
+  const userEmail = auth.currentUser?.email || "User";
+  const initial = userEmail.charAt(0).toUpperCase();
+
   return (
     <View style={styles.container}>
       <View style={styles.profileCircle}>
@@ -12,17 +14,21 @@ const initial = userEmail.charAt(0).toUpperCase();
       </View>
 
       <Text style={styles.profileEmail}>{userEmail}</Text>
+      
+      <TouchableOpacity onPress={() => navigation.navigate("AccountSettings")}>
+        <Text style={styles.menuItem}>Account Settings</Text>
+      </TouchableOpacity>
 
-      <Text style={styles.menuItem}>Account Settings</Text>
       <Text style={styles.menuItem}>Device Settings</Text>
       <Text style={styles.menuItem}>Support / Help</Text>
       <Text style={styles.menuItem}>About</Text>
+
       <TouchableOpacity
-                  style={styles.button}
-                  onPress={() => navigation.navigate("HomePage")}
-                >
-                  <Text style={[styles.menuItem, styles.logout]}>Logout</Text>
-                </TouchableOpacity>
+        style={styles.button}
+        onPress={() => navigation.navigate("HomePage")}
+      >
+        <Text style={[styles.menuItem, styles.logout]}>Logout</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -42,17 +48,17 @@ const styles = StyleSheet.create({
     color: "red", 
     fontWeight: "bold" 
   },
-    profileCircle: {
-    width: 90,
-    height: 90,
-    borderRadius: 45,
+  profileCircle: {
+    width: 140,
+    height: 140,
+    borderRadius: 70,
     backgroundColor: "#a34f9f",
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 15,
   },
   profileInitial: {
-    fontSize: 40,
+    fontSize: 70,
     color: "white",
     fontWeight: "bold",
   },
@@ -61,5 +67,4 @@ const styles = StyleSheet.create({
     color: "#555",
     marginBottom: 25,
   },
-
 });

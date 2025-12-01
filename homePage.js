@@ -29,18 +29,20 @@ export default function HomePage({ navigation }) {
 const styles = StyleSheet.create({
   mobileWrapper: {
     flex: 1,
+    // height: "100%",
+    // weidth: "100%",
     alignItems: "center",       
     justifyContent: "center",  
     backgroundColor: "#ddd",    
     paddingVertical: 20,
   },
   container: {
-    width: 360,                 
+    width: 360, //pwede e change to 100%   para web view              
     maxWidth: "100%",
-    height: 710,                
+    height: 710, //pwede e change to 100%   para web view            
     backgroundColor: "#f2f2f2",
     paddingHorizontal: 20,
-    borderRadius: 20,
+    borderRadius: 20, 
     alignItems: "center",
     justifyContent: "center",
     boxShadow: "0px 4px 10px rgba(0,0,0,0.25)",

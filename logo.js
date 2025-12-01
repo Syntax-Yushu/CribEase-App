@@ -4,18 +4,21 @@ import { View, Image, StyleSheet } from "react-native";
 export default function Logo({ navigation }) {
 
   useEffect(() => {
-    setTimeout(() => {
-      navigation.replace("Home"); // auto-redirect
-    }, 2000); // 2 seconds splash duration
+    const timer = setTimeout(() => {
+      navigation.replace("HomePage"); // redirect after splash
+    }, 3000); // 3 seconds
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <View style={styles.container}>
       <Image
-        source={require("./assets/logo.png")}
-        style={styles.logo}
-        resizeMode="contain"
-      />
+  source={require("./assets/logo.png")}
+  style={styles.logo}
+  resizeMode="contain"
+/>
+
     </View>
   );
 }

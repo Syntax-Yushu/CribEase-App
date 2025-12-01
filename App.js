@@ -8,6 +8,7 @@ import Login from "./login";
 import Signup from "./signup";
 import MainTabs from "./mainTabs"; 
 import BabyTemp from "./babyTemp";
+import AccountSettings from "./accountSettings";
 
 
 const Stack = createStackNavigator();
@@ -25,6 +26,8 @@ export default function App() {
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Dashboard" component={MainTabs} />
         <Stack.Screen name="BabyTemp" component={BabyTemp}/>
+        <Stack.Screen name="AccountSettings" component={AccountSettings} />
+
         
 
       </Stack.Navigator>
